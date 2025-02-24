@@ -13,24 +13,47 @@ public class GatherlyDbContext : DbContext
     {
         modelBuilder.Entity<Gathering>(builder =>
         {
-            builder.ToTable("Gatherings");
-                
+            builder.ToTable("Gatherings").HasKey(g => g.Id);
 
+            builder.HasMany(g => g.Attendees)
+                .WithOne()
+                .HasForeignKey(a => a.GatheringId)
+                .IsRequired();
+
+            builder.HasOne(g => g.Creator)
+                .WithMany()
+                .HasForeignKey("CreatorId")
+                .IsRequired();
+
+            builder.HasMany(g => g.Invitations)
+                .WithOne()
+                .HasForeignKey(i => i.GatheringId)
+                .IsRequired();
         });
 
         modelBuilder.Entity<Member>(builder =>
         {
-
+            builder.ToTable("Members").HasKey(m => m.Id);
         });
 
         modelBuilder.Entity<Invitation>(builder =>
         {
+            builder.ToTable("Invitations").HasKey(i => i.Id);
 
+            builder.HasOne<Member>()
+                .WithMany()
+                .HasForeignKey(i => i.MemberId)
+                .IsRequired();
         });
 
         modelBuilder.Entity<Attendee>(builder =>
         {
+            builder.ToTable("Attendees").HasKey(a => a.Id);
 
+            builder.HasOne<Member>()
+                 .WithMany()
+                 .HasForeignKey(a => a.MemberId)
+                 .IsRequired();
         });
     }
 }

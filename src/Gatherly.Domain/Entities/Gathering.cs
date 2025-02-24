@@ -1,5 +1,4 @@
 ﻿using Gatherly.Domain.Shared.Enums;
-using System.Diagnostics.Metrics;
 
 namespace Gatherly.Domain.Entities;
 
@@ -7,6 +6,11 @@ public class Gathering
 {
     private readonly List<Invitation> _invitations = new List<Invitation>();
     private readonly List<Attendee> _attendees = new List<Attendee>();
+
+    private Gathering()
+    {
+
+    }
     private Gathering(
         Guid id,
         Member creator,
