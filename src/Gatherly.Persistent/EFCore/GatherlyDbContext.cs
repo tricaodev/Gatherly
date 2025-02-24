@@ -14,6 +14,7 @@ public class GatherlyDbContext : DbContext
         modelBuilder.Entity<Gathering>(builder =>
         {
             builder.ToTable("Gatherings");
+                
 
         });
 
