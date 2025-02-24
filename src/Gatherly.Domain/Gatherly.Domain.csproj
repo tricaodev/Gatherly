@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Gatherly.Domain.Shared\Gatherly.Domain.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

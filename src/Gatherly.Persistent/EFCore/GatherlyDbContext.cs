@@ -1,7 +1,7 @@
 ﻿using Gatherly.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Gatherly.Persistent;
+namespace Gatherly.Persistent.EFCore;
 
 public class GatherlyDbContext : DbContext
 {
@@ -14,7 +14,22 @@ public class GatherlyDbContext : DbContext
         modelBuilder.Entity<Gathering>(builder =>
         {
             builder.ToTable("Gatherings");
+
         });
 
+        modelBuilder.Entity<Member>(builder =>
+        {
+
+        });
+
+        modelBuilder.Entity<Invitation>(builder =>
+        {
+
+        });
+
+        modelBuilder.Entity<Attendee>(builder =>
+        {
+
+        });
     }
 }

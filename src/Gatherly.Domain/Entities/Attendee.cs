@@ -2,6 +2,13 @@
 
 public class Attendee
 {
-    public int Id { get; set; }
-    public int GatheringId { get; set; }
+    public Attendee(Guid gatheringId, Guid memberId)
+    {
+        GatheringId = gatheringId;
+        MemberId = memberId;
+        CreatedOnUtc = DateTime.UtcNow;
+    }
+    public Guid GatheringId { get; private set; }
+    public Guid MemberId { get; private set; }
+    public DateTime CreatedOnUtc { get; private set; }
 }
