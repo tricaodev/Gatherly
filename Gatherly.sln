@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{ADA339D5-1A3C-4390-A23A-FD9029BD63C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{97F9A164-C0F7-49CD-9DB5-F516DAA4E906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Domain", "src\Gatherly.Domain\Gatherly.Domain.csproj", "{97524924-8BD3-4162-AF4D-D80BC7130945}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Application", "src\Gatherly.Application\Gatherly.Application.csproj", "{36189993-818E-4D0A-BC3F-760F290A3DA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Infrastructure", "src\Gatherly.Infrastructure\Gatherly.Infrastructure.csproj", "{1DD5FDB2-46BE-436A-9AD3-7A2AFA441108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Persistent", "src\Gatherly.Persistent\Gatherly.Persistent.csproj", "{8DE566A9-2C72-4284-8F85-FF536AF9DE7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Presentation", "src\Gatherly.Presentation\Gatherly.Presentation.csproj", "{BED07717-7021-400E-BF2A-1FC4C5D70CDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Domain.Shared", "src\Gatherly.Domain.Shared\Gatherly.Domain.Shared.csproj", "{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97524924-8BD3-4162-AF4D-D80BC7130945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97524924-8BD3-4162-AF4D-D80BC7130945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97524924-8BD3-4162-AF4D-D80BC7130945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97524924-8BD3-4162-AF4D-D80BC7130945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36189993-818E-4D0A-BC3F-760F290A3DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36189993-818E-4D0A-BC3F-760F290A3DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36189993-818E-4D0A-BC3F-760F290A3DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36189993-818E-4D0A-BC3F-760F290A3DA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD5FDB2-46BE-436A-9AD3-7A2AFA441108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD5FDB2-46BE-436A-9AD3-7A2AFA441108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD5FDB2-46BE-436A-9AD3-7A2AFA441108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD5FDB2-46BE-436A-9AD3-7A2AFA441108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE566A9-2C72-4284-8F85-FF536AF9DE7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE566A9-2C72-4284-8F85-FF536AF9DE7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE566A9-2C72-4284-8F85-FF536AF9DE7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE566A9-2C72-4284-8F85-FF536AF9DE7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED07717-7021-400E-BF2A-1FC4C5D70CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED07717-7021-400E-BF2A-1FC4C5D70CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED07717-7021-400E-BF2A-1FC4C5D70CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED07717-7021-400E-BF2A-1FC4C5D70CDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{97524924-8BD3-4162-AF4D-D80BC7130945} = {ADA339D5-1A3C-4390-A23A-FD9029BD63C5}
+		{36189993-818E-4D0A-BC3F-760F290A3DA2} = {ADA339D5-1A3C-4390-A23A-FD9029BD63C5}
+		{1DD5FDB2-46BE-436A-9AD3-7A2AFA441108} = {ADA339D5-1A3C-4390-A23A-FD9029BD63C5}
+		{8DE566A9-2C72-4284-8F85-FF536AF9DE7D} = {ADA339D5-1A3C-4390-A23A-FD9029BD63C5}
+		{BED07717-7021-400E-BF2A-1FC4C5D70CDC} = {ADA339D5-1A3C-4390-A23A-FD9029BD63C5}
+		{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B} = {ADA339D5-1A3C-4390-A23A-FD9029BD63C5}
+	EndGlobalSection
+EndGlobal
