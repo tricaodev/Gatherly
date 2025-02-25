@@ -4,6 +4,9 @@ namespace Gatherly.Domain.Entities;
 
 public sealed class Member : Entity
 {
+    public Member() : base(Guid.Empty)
+    {
+    }
     public Member(Guid id, string firstName, string lastName, string email)
         : base(id)
     {

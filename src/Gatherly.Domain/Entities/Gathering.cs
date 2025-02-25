@@ -7,6 +7,10 @@ public sealed class Gathering : Entity
 {
     private readonly List<Invitation> _invitations = new List<Invitation>();
     private readonly List<Attendee> _attendees = new List<Attendee>();
+
+    private Gathering() : base(Guid.Empty)
+    {
+    }
     private Gathering(
         Guid id,
         Member creator,
@@ -21,7 +25,7 @@ public sealed class Gathering : Entity
         Name = name;
         Location = location;
     }
-    public Member Creator {  get; private set; }
+    public Member Creator { get; private set; } = new Member();
     public GatheringType Type { get; private set; }
     public string Name { get; private set; } = string.Empty;
     public DateTime ScheduledAtUtc { get; private set; }
