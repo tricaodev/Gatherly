@@ -1,33 +1,27 @@
-﻿using Gatherly.Domain.Shared.Enums;
+﻿using Gatherly.Domain.Primitives;
+using Gatherly.Domain.Shared.Enums;
 
 namespace Gatherly.Domain.Entities;
 
-public class Gathering
+public sealed class Gathering : Entity
 {
     private readonly List<Invitation> _invitations = new List<Invitation>();
     private readonly List<Attendee> _attendees = new List<Attendee>();
-
-    private Gathering()
-    {
-
-    }
     private Gathering(
         Guid id,
         Member creator,
         GatheringType type,
         DateTime scheduledAtUtc,
         string name,
-        string? location)
+        string? location) : base(id)
     {
-        Id = id;
         Creator = creator;
         Type = type;
         ScheduledAtUtc = scheduledAtUtc;
         Name = name;
         Location = location;
     }
-    public Guid Id { get; private set; }
-    public Member Creator {  get; private set; } = new Member();
+    public Member Creator {  get; private set; }
     public GatheringType Type { get; private set; }
     public string Name { get; private set; } = string.Empty;
     public DateTime ScheduledAtUtc { get; private set; }
@@ -107,7 +101,7 @@ public class Gathering
         invitation.Accepted();
 
         // Create attendee
-        var attendee = new Attendee(invitation.GatheringId, invitation.MemberId);
+        var attendee = new Attendee(Guid.NewGuid(), invitation.GatheringId, invitation.MemberId);
 
         _attendees.Add(attendee);
         NumberOfAttendees++;

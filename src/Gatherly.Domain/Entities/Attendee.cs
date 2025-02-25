@@ -1,15 +1,16 @@
-﻿namespace Gatherly.Domain.Entities;
+﻿using Gatherly.Domain.Primitives;
 
-public class Attendee
+namespace Gatherly.Domain.Entities;
+
+public sealed class Attendee : Entity
 {
-    public Attendee(Guid gatheringId, Guid memberId)
+    public Attendee(Guid id, Guid gatheringId, Guid memberId)
+        :base(id)
     {
-        Id = Guid.NewGuid();
         GatheringId = gatheringId;
         MemberId = memberId;
         CreatedOnUtc = DateTime.UtcNow;
     }
-    public Guid Id { get; set; }
     public Guid GatheringId { get; private set; }
     public Guid MemberId { get; private set; }
     public DateTime CreatedOnUtc { get; private set; }
