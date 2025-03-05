@@ -1,5 +1,7 @@
 ﻿using Gatherly.Application.Abstractions;
+using Gatherly.Domain.Entities;
 using Gatherly.Domain.Repositories;
+using Gatherly.Domain.Shared;
 using Gatherly.Domain.Shared.Enums;
 using MediatR;
 
@@ -35,9 +37,15 @@ public class SendInvitationCommandHandler : IRequestHandler<SendInvitationComman
             return Unit.Value;
         }
 
-        var invitation = gathering.SendInvitation(Guid.NewGuid(), gathering.Id, member.Id, InvitationStatus.Pending, DateTime.UtcNow);
+        Result<Invitation> invitationResult = gathering.SendInvitation(Guid.NewGuid(), gathering.Id, member.Id, InvitationStatus.Pending, DateTime.UtcNow);
 
-        _invitationRepository.Add(invitation);
+        if(!invitationResult.IsSuccess)
+        {
+            // Log error
+            return Unit.Value;
+        }
+
+        _invitationRepository.Add(invitationResult.Value);
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 

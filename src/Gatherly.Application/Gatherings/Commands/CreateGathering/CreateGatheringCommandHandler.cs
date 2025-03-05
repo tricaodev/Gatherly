@@ -1,6 +1,5 @@
 ﻿using Gatherly.Domain.Entities;
 using Gatherly.Domain.Repositories;
-using Gatherly.Domain.Shared.Enums;
 using MediatR;
 
 namespace Gatherly.Application.Gatherings.Commands.CreateGathering;
