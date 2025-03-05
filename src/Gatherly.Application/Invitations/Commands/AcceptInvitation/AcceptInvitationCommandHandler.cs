@@ -1,5 +1,7 @@
 ﻿using Gatherly.Application.Abstractions;
+using Gatherly.Domain.Entities;
 using Gatherly.Domain.Repositories;
+using Gatherly.Domain.Shared;
 using Gatherly.Domain.Shared.Enums;
 using MediatR;
 
@@ -45,11 +47,11 @@ public class AcceptInvitationCommandHandler : IRequestHandler<AcceptInvitationCo
             return Unit.Value;
         }
 
-        var attendee = gathering.AcceptInvitation(invitation);
+        Result<Attendee> attendeeResult = gathering.AcceptInvitation(invitation);
 
-        if (attendee is not null)
+        if (attendeeResult is not null)
         {
-            _attendeeRepository.Add(attendee);
+            _attendeeRepository.Add(attendeeResult.Value);
         }
 
         // Send email
