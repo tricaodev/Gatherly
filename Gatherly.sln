@@ -17,8 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Persistent", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Presentation", "src\Gatherly.Presentation\Gatherly.Presentation.csproj", "{BED07717-7021-400E-BF2A-1FC4C5D70CDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gatherly.Domain.Shared", "src\Gatherly.Domain.Shared\Gatherly.Domain.Shared.csproj", "{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,10 +43,6 @@ Global
 		{BED07717-7021-400E-BF2A-1FC4C5D70CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BED07717-7021-400E-BF2A-1FC4C5D70CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BED07717-7021-400E-BF2A-1FC4C5D70CDC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +53,5 @@ Global
 		{1DD5FDB2-46BE-436A-9AD3-7A2AFA441108} = {ADA339D5-1A3C-4390-A23A-FD9029BD63C5}
 		{8DE566A9-2C72-4284-8F85-FF536AF9DE7D} = {ADA339D5-1A3C-4390-A23A-FD9029BD63C5}
 		{BED07717-7021-400E-BF2A-1FC4C5D70CDC} = {ADA339D5-1A3C-4390-A23A-FD9029BD63C5}
-		{7A4BA934-CEC8-4A57-AD58-314DEBFAF10B} = {ADA339D5-1A3C-4390-A23A-FD9029BD63C5}
 	EndGlobalSection
 EndGlobal
